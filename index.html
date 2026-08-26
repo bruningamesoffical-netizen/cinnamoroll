@@ -17,10 +17,12 @@
     body {
       min-height: 100vh;
       color: white;
+
       background:
         radial-gradient(circle at top, #5425a8 0%, transparent 35%),
         radial-gradient(circle at bottom, #142b78 0%, transparent 40%),
         #070712;
+
       overflow-x: hidden;
     }
 
@@ -28,9 +30,15 @@
       content: "";
       position: fixed;
       inset: 0;
+
       background-image:
-        radial-gradient(rgba(255,255,255,.12) 1px, transparent 1px);
+        radial-gradient(
+          rgba(255,255,255,.12) 1px,
+          transparent 1px
+        );
+
       background-size: 35px 35px;
+
       pointer-events: none;
       z-index: -1;
     }
@@ -42,32 +50,46 @@
       text-align: center;
     }
 
-    .profile {
-      width: 115px;
-      height: 115px;
-      margin: auto;
-      border-radius: 50%;
-      padding: 4px;
+    /* =========================
+       FOTO / LOGO DO CANAL
+       ========================= */
 
-      background: linear-gradient(
-        135deg,
-        #8c4dff,
-        #38a5ff,
-        #c65cff
-      );
+    .profile {
+      width: 145px;
+      height: 145px;
+
+      margin: auto;
+
+      border-radius: 50%;
+      padding: 5px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #8c4dff,
+          #38a5ff,
+          #c65cff
+        );
 
       box-shadow:
         0 0 25px rgba(126, 67, 255, .7),
         0 0 60px rgba(42, 145, 255, .25);
 
       animation: float 3s ease-in-out infinite;
+
+      overflow: hidden;
     }
 
     .profile img {
+      display: block;
+
       width: 100%;
       height: 100%;
+
       object-fit: cover;
+
       border-radius: 50%;
+
       border: 3px solid #090912;
     }
 
@@ -81,8 +103,13 @@
       }
     }
 
+    /* =========================
+       NOME
+       ========================= */
+
     h1 {
       margin-top: 18px;
+
       font-size: 30px;
       font-weight: 800;
 
@@ -93,21 +120,33 @@
 
     .username {
       margin-top: 5px;
+
       color: #b9b4d7;
+
       font-size: 14px;
     }
 
     .description {
       margin: 15px auto 25px;
+
       color: #d9d5ea;
+
       line-height: 1.5;
+
       max-width: 400px;
+
       font-size: 14px;
     }
 
+    /* =========================
+       LINKS
+       ========================= */
+
     .links {
       display: flex;
+
       flex-direction: column;
+
       gap: 14px;
     }
 
@@ -115,15 +154,19 @@
       position: relative;
 
       display: flex;
+
       align-items: center;
 
       text-decoration: none;
+
       color: white;
 
       padding: 16px 18px;
+
       min-height: 64px;
 
       border: 1px solid rgba(255,255,255,.12);
+
       border-radius: 18px;
 
       background: rgba(255,255,255,.07);
@@ -146,18 +189,20 @@
       content: "";
 
       position: absolute;
+
       top: 0;
       left: -120%;
 
       width: 70%;
       height: 100%;
 
-      background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.18),
-        transparent
-      );
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(255,255,255,.18),
+          transparent
+        );
 
       transform: skewX(-20deg);
 
@@ -178,11 +223,16 @@
         0 0 20px rgba(92, 53, 255, .15);
     }
 
+    /* =========================
+       ÍCONES
+       ========================= */
+
     .icon {
       width: 42px;
       height: 42px;
 
       display: flex;
+
       align-items: center;
       justify-content: center;
 
@@ -205,6 +255,7 @@
 
     .link-title {
       font-size: 16px;
+
       font-weight: bold;
     }
 
@@ -218,8 +269,13 @@
 
     .arrow {
       font-size: 20px;
+
       color: #aaa;
     }
+
+    /* =========================
+       YOUTUBE DESTACADO
+       ========================= */
 
     .featured {
       border-color: rgba(135, 79, 255, .5);
@@ -231,6 +287,10 @@
           rgba(35,117,255,.12)
         );
     }
+
+    /* =========================
+       RODAPÉ
+       ========================= */
 
     .section-title {
       margin: 30px 0 13px;
@@ -256,6 +316,10 @@
       color: #9b63ff;
     }
 
+    /* =========================
+       CELULAR
+       ========================= */
+
     @media (max-width: 400px) {
 
       h1 {
@@ -263,8 +327,8 @@
       }
 
       .profile {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
       }
 
       .link {
@@ -278,18 +342,29 @@
 
   <main class="container">
 
-    <!-- FOTO DO CANAL -->
+    <!-- =========================
+         LOGO DO CANAL
+         ========================= -->
+
     <div class="profile">
 
+      <!--
+        IMPORTANTE:
+        Esta imagem precisa estar na mesma pasta
+        do index.html no GitHub.
+      -->
+
       <img
-        src="logo.jpg"
-        alt="Logo do canal"
+        src="./82e921814c24d60b9c6cad14051960a.jpg"
+        alt="Logo do canal Dark Blox"
       >
 
     </div>
 
 
-    <!-- NOME DO CANAL -->
+    <!-- =========================
+         NOME DO CANAL
+         ========================= -->
 
     <h1>Dark Blox</h1>
 
@@ -304,7 +379,9 @@
     </p>
 
 
-    <!-- BOTÕES -->
+    <!-- =========================
+         BOTÕES
+         ========================= -->
 
     <div class="links">
 
@@ -315,6 +392,7 @@
         class="link featured"
         href="https://www.youtube.com/@Dark_blox-off"
         target="_blank"
+        rel="noopener noreferrer"
       >
 
         <div class="icon">
@@ -346,6 +424,7 @@
         class="link"
         href="https://tiktok.com/@darkzinhoblox0"
         target="_blank"
+        rel="noopener noreferrer"
       >
 
         <div class="icon">
@@ -377,6 +456,7 @@
         class="link"
         href="https://whatsapp.com/channel/0029VbDWw0e8aKvIfgF7Cm1U"
         target="_blank"
+        rel="noopener noreferrer"
       >
 
         <div class="icon">
@@ -408,6 +488,7 @@
         class="link"
         href="https://www.roblox.com/users/10394643249/profile"
         target="_blank"
+        rel="noopener noreferrer"
       >
 
         <div class="icon">
@@ -435,7 +516,9 @@
     </div>
 
 
-    <!-- RODAPÉ -->
+    <!-- =========================
+         RODAPÉ
+         ========================= -->
 
     <div class="section-title">
       Obrigado por visitar 💜
