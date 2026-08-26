@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dark Blox | Links</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      color: white;
+      background:
+        radial-gradient(circle at top, #5425a8 0%, transparent 35%),
+        radial-gradient(circle at bottom, #142b78 0%, transparent 40%),
+        #070712;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(rgba(255,255,255,.12) 1px, transparent 1px);
+      background-size: 35px 35px;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .container {
+      width: min(92%, 520px);
+      margin: auto;
+      padding: 35px 0 30px;
+      text-align: center;
+    }
+
+    .profile {
+      width: 115px;
+      height: 115px;
+      margin: auto;
+      border-radius: 50%;
+      padding: 4px;
+
+      background: linear-gradient(
+        135deg,
+        #8c4dff,
+        #38a5ff,
+        #c65cff
+      );
+
+      box-shadow:
+        0 0 25px rgba(126, 67, 255, .7),
+        0 0 60px rgba(42, 145, 255, .25);
+
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .profile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #090912;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-7px);
+      }
+    }
+
+    h1 {
+      margin-top: 18px;
+      font-size: 30px;
+      font-weight: 800;
+
+      text-shadow:
+        0 0 10px #884cff,
+        0 0 25px #5b30ff;
+    }
+
+    .username {
+      margin-top: 5px;
+      color: #b9b4d7;
+      font-size: 14px;
+    }
+
+    .description {
+      margin: 15px auto 25px;
+      color: #d9d5ea;
+      line-height: 1.5;
+      max-width: 400px;
+      font-size: 14px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .link {
+      position: relative;
+
+      display: flex;
+      align-items: center;
+
+      text-decoration: none;
+      color: white;
+
+      padding: 16px 18px;
+      min-height: 64px;
+
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 18px;
+
+      background: rgba(255,255,255,.07);
+
+      backdrop-filter: blur(15px);
+
+      box-shadow:
+        0 8px 25px rgba(0,0,0,.25),
+        inset 0 1px rgba(255,255,255,.08);
+
+      overflow: hidden;
+
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+    }
+
+    .link::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: -120%;
+
+      width: 70%;
+      height: 100%;
+
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.18),
+        transparent
+      );
+
+      transform: skewX(-20deg);
+
+      transition: .6s;
+    }
+
+    .link:hover::before {
+      left: 130%;
+    }
+
+    .link:hover {
+      transform: translateY(-4px) scale(1.015);
+
+      background: rgba(126, 72, 255, .18);
+
+      box-shadow:
+        0 12px 30px rgba(83, 48, 255, .35),
+        0 0 20px rgba(92, 53, 255, .15);
+    }
+
+    .icon {
+      width: 42px;
+      height: 42px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 13px;
+
+      background: rgba(255,255,255,.1);
+
+      font-size: 21px;
+
+      flex-shrink: 0;
+    }
+
+    .link-text {
+      flex: 1;
+
+      text-align: left;
+
+      margin-left: 14px;
+    }
+
+    .link-title {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .link-subtitle {
+      margin-top: 3px;
+
+      font-size: 11px;
+
+      color: #aaa5c2;
+    }
+
+    .arrow {
+      font-size: 20px;
+      color: #aaa;
+    }
+
+    .featured {
+      border-color: rgba(135, 79, 255, .5);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(119,64,255,.25),
+          rgba(35,117,255,.12)
+        );
+    }
+
+    .section-title {
+      margin: 30px 0 13px;
+
+      color: #aaa5c2;
+
+      font-size: 12px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 2px;
+    }
+
+    footer {
+      margin-top: 30px;
+
+      color: #77728d;
+
+      font-size: 11px;
+    }
+
+    .heart {
+      color: #9b63ff;
+    }
+
+    @media (max-width: 400px) {
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .profile {
+        width: 100px;
+        height: 100px;
+      }
+
+      .link {
+        min-height: 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <!-- FOTO DO CANAL -->
+    <div class="profile">
+
+      <img
+        src="logo.jpg"
+        alt="Logo do canal"
+      >
+
+    </div>
+
+
+    <!-- NOME DO CANAL -->
+
+    <h1>Dark Blox</h1>
+
+    <div class="username">
+      @Dark_blox-off
+    </div>
+
+    <p class="description">
+      🎮 Conteúdo gamer, Roblox, edits e muito mais!
+      <br>
+      Seja bem-vindo ao meu cantinho 💜
+    </p>
+
+
+    <!-- BOTÕES -->
+
+    <div class="links">
+
+
+      <!-- YOUTUBE -->
+
+      <a
+        class="link featured"
+        href="https://www.youtube.com/@Dark_blox-off"
+        target="_blank"
+      >
+
+        <div class="icon">
+          ▶️
+        </div>
+
+        <div class="link-text">
+
+          <div class="link-title">
+            YouTube
+          </div>
+
+          <div class="link-subtitle">
+            Me acompanhe no canal!
+          </div>
+
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+
+      </a>
+
+
+      <!-- TIKTOK -->
+
+      <a
+        class="link"
+        href="https://tiktok.com/@darkzinhoblox0"
+        target="_blank"
+      >
+
+        <div class="icon">
+          ♪
+        </div>
+
+        <div class="link-text">
+
+          <div class="link-title">
+            TikTok
+          </div>
+
+          <div class="link-subtitle">
+            Vídeos curtos e edits
+          </div>
+
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+
+      </a>
+
+
+      <!-- WHATSAPP -->
+
+      <a
+        class="link"
+        href="https://whatsapp.com/channel/0029VbDWw0e8aKvIfgF7Cm1U"
+        target="_blank"
+      >
+
+        <div class="icon">
+          💬
+        </div>
+
+        <div class="link-text">
+
+          <div class="link-title">
+            WhatsApp
+          </div>
+
+          <div class="link-subtitle">
+            Entre no meu canal!
+          </div>
+
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+
+      </a>
+
+
+      <!-- ROBLOX -->
+
+      <a
+        class="link"
+        href="https://www.roblox.com/users/10394643249/profile"
+        target="_blank"
+      >
+
+        <div class="icon">
+          🎮
+        </div>
+
+        <div class="link-text">
+
+          <div class="link-title">
+            Roblox
+          </div>
+
+          <div class="link-subtitle">
+            Meu perfil no Roblox
+          </div>
+
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+
+      </a>
+
+    </div>
+
+
+    <!-- RODAPÉ -->
+
+    <div class="section-title">
+      Obrigado por visitar 💜
+    </div>
+
+    <footer>
+      Feito com
+      <span class="heart">♥</span>
+      para a comunidade
+    </footer>
+
+  </main>
+
+</body>
+</html>
