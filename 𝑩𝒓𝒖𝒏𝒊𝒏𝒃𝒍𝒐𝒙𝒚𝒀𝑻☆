@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>𝑩𝒓𝒖𝒏𝒊𝒏𝒃𝒍𝒐𝒙𝒚𝒀𝑻☆ | Links</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      color: #174b70;
+
+      background:
+        radial-gradient(circle at 20% 10%, #ffffff 0%, transparent 25%),
+        radial-gradient(circle at 80% 20%, #dff7ff 0%, transparent 30%),
+        linear-gradient(
+          180deg,
+          #aee8ff 0%,
+          #eafaff 45%,
+          #ffffff 100%
+        );
+
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+
+      background-image:
+        radial-gradient(
+          rgba(255,255,255,.8) 2px,
+          transparent 2px
+        );
+
+      background-size: 45px 45px;
+      opacity: .45;
+
+      pointer-events: none;
+      z-index: -2;
+    }
+
+    .container {
+      width: min(92%, 520px);
+      margin: auto;
+      padding: 40px 0 35px;
+      text-align: center;
+    }
+
+    /* FOTO DE PERFIL */
+
+    .profile {
+      position: relative;
+
+      width: 150px;
+      height: 150px;
+
+      margin: auto;
+      padding: 5px;
+
+      border-radius: 50%;
+
+      background:
+        linear-gradient(
+          135deg,
+          #ffffff,
+          #79d8ff,
+          #ffffff,
+          #5dbfff
+        );
+
+      box-shadow:
+        0 0 20px rgba(75,180,240,.45),
+        0 0 50px rgba(110,210,255,.35);
+
+      animation: profileFloat 3s ease-in-out infinite;
+    }
+
+    .profile img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      border-radius: 50%;
+
+      border: 4px solid white;
+
+      display: block;
+    }
+
+    @keyframes profileFloat {
+
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+
+    }
+
+    /* DECORAÇÃO */
+
+    .decoration {
+      margin: 25px auto 15px;
+
+      font-size: 27px;
+
+      letter-spacing: 8px;
+
+      animation: decorationFloat 3s ease-in-out infinite;
+    }
+
+    @keyframes decorationFloat {
+
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-5px);
+      }
+
+    }
+
+    /* NOME */
+
+    h1 {
+      margin-top: 22px;
+
+      font-size: 32px;
+
+      font-weight: 800;
+
+      color: #12608d;
+
+      text-shadow:
+        0 2px 0 white,
+        0 0 12px rgba(80,190,240,.5);
+
+      word-break: break-word;
+    }
+
+    /* @ DO CANAL */
+
+    .username {
+      margin-top: 6px;
+
+      color: #5688a5;
+
+      font-size: 15px;
+    }
+
+    /* DESCRIÇÃO */
+
+    .description {
+      margin: 18px auto 28px;
+
+      color: #376c89;
+
+      line-height: 1.6;
+
+      max-width: 430px;
+
+      font-size: 15px;
+    }
+
+    .heart {
+      display: inline-block;
+
+      color: #73cfff;
+
+      animation: heartBeat 1.5s infinite;
+    }
+
+    @keyframes heartBeat {
+
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.25);
+      }
+
+    }
+
+    /* BOTÕES */
+
+    .links {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 15px;
+    }
+
+    .link {
+      position: relative;
+
+      display: flex;
+
+      align-items: center;
+
+      text-decoration: none;
+
+      color: #195777;
+
+      padding: 16px 18px;
+
+      min-height: 70px;
+
+      border: 2px solid rgba(255,255,255,.8);
+
+      border-radius: 22px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,255,255,.9),
+          rgba(224,248,255,.8)
+        );
+
+      backdrop-filter: blur(12px);
+
+      box-shadow:
+        0 8px 20px rgba(54,145,190,.15),
+        inset 0 1px 2px white;
+
+      overflow: hidden;
+
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+    }
+
+    /* BRILHO */
+
+    .link::before {
+
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+      left: -120%;
+
+      width: 70%;
+      height: 100%;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(255,255,255,.9),
+          transparent
+        );
+
+      transform: skewX(-20deg);
+
+      transition: .6s;
+    }
+
+    .link:hover::before {
+      left: 130%;
+    }
+
+    .link:hover {
+
+      transform:
+        translateY(-5px)
+        scale(1.02);
+
+      box-shadow:
+        0 14px 30px rgba(60,170,220,.25),
+        0 0 20px rgba(100,210,255,.25);
+    }
+
+    /* BOTÃO PRINCIPAL */
+
+    .featured {
+
+      border-color: #74d3ff;
+
+      background:
+        linear-gradient(
+          135deg,
+          #ffffff,
+          #c9f1ff
+        );
+
+      box-shadow:
+        0 8px 25px rgba(65,170,220,.25),
+        0 0 20px rgba(120,220,255,.2);
+    }
+
+    /* ÍCONES */
+
+    .icon {
+
+      width: 45px;
+      height: 45px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 15px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #dff7ff,
+          #ffffff
+        );
+
+      border: 1px solid #c7edff;
+
+      font-size: 22px;
+
+      flex-shrink: 0;
+
+      box-shadow:
+        0 4px 10px rgba(80,170,210,.12);
+    }
+
+    /* TEXTO */
+
+    .link-text {
+
+      flex: 1;
+
+      text-align: left;
+
+      margin-left: 14px;
+    }
+
+    .link-title {
+
+      font-size: 17px;
+
+      font-weight: bold;
+
+      color: #165878;
+    }
+
+    .link-subtitle {
+
+      margin-top: 4px;
+
+      font-size: 12px;
+
+      color: #7197aa;
+    }
+
+    /* SETA */
+
+    .arrow {
+
+      font-size: 25px;
+
+      color: #72b9d7;
+
+      transition: .25s;
+    }
+
+    .link:hover .arrow {
+
+      transform: translateX(5px);
+
+      color: #258bbb;
+    }
+
+    /* RODAPÉ */
+
+    .section-title {
+
+      margin: 32px 0 14px;
+
+      color: #6394ab;
+
+      font-size: 12px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 2px;
+    }
+
+    footer {
+
+      margin-top: 20px;
+
+      color: #82a6b8;
+
+      font-size: 11px;
+    }
+
+    /* CELULAR */
+
+    @media (max-width: 400px) {
+
+      h1 {
+        font-size: 25px;
+      }
+
+      .profile {
+        width: 125px;
+        height: 125px;
+      }
+
+      .link {
+        min-height: 64px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <main class="container">
+
+
+    <!-- FOTO DO CANAL -->
+
+    <div class="profile">
+
+      <img
+        src="logo.jpg"
+        alt="Logo do canal 𝑩𝒓𝒖𝒏𝒊𝒏𝒃𝒍𝒐𝒙𝒚𝒀𝑻☆"
+      >
+
+    </div>
+
+
+    <!-- NOME DO CANAL -->
+
+    <h1>
+      𝑩𝒓𝒖𝒏𝒊𝒏𝒃𝒍𝒐𝒙𝒚𝒀𝑻☆
+    </h1>
+
+
+    <!-- @ DO CANAL -->
+
+    <div class="username">
+      @BruninbloxyYT-off
+    </div>
+
+
+    <!-- DESCRIÇÃO -->
+
+    <p class="description">
+
+      🎮 Conteúdo gamer, Roblox, edits e muito mais!
+
+      <br>
+
+      Bem-vindo ao meu cantinho azul!
+
+      <span class="heart">
+        ♥
+      </span>
+
+    </p>
+
+
+    <!-- DECORAÇÃO -->
+
+    <div class="decoration">
+      ✦ 💙 ✦
+    </div>
+
+
+    <!-- BOTÕES -->
+
+    <div class="links">
+
+
+      <!-- YOUTUBE -->
+
+      <a
+        class="link featured"
+        href="https://www.youtube.com/@BruninbloxyYT-off"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div class="icon">
+          ▶️
+        </div>
+
+        <div class="link-text">
+
+          <div class="link-title">
+            YouTube
+          </div>
+
+          <div class="link-subtitle">
+            Me acompanhe no canal!
+          </div>
+
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+
+      </a>
+
+
+      <!-- TIKTOK -->
+
+      <a
+        class="link"
+        href="https://tiktok.com/@darkzinhoblox0"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div class="icon">
+          ♪
+        </div>
+
+        <div class="link-text">
+
+          <div class="link-title">
+            TikTok
+          </div>
+
+          <div class="link-subtitle">
+            Vídeos curtos e edits
+          </div>
+
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+
+      </a>
+
+
+      <!-- ROBLOX -->
+
+      <a
+        class="link"
+        href="https://www.roblox.com/users/10394643249/profile"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div class="icon">
+          🎮
+        </div>
+
+        <div class="link-text">
+
+          <div class="link-title">
+            Roblox
+          </div>
+
+          <div class="link-subtitle">
+            Meu perfil no Roblox
+          </div>
+
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+
+      </a>
+
+
+      <!-- COMUNIDADE DO YOUTUBE -->
+
+      <a
+        class="link"
+        href="https://www.youtube.com/@BruninbloxyYT-off/community"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div class="icon">
+          💬
+        </div>
+
+        <div class="link-text">
+
+          <div class="link-title">
+            Comunidade
+          </div>
+
+          <div class="link-subtitle">
+            Entre na comunidade do canal!
+          </div>
+
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+
+      </a>
+
+
+    </div>
+
+
+    <!-- RODAPÉ -->
+
+    <div class="section-title">
+      Obrigado por visitar 💙
+    </div>
+
+
+    <footer>
+
+      Feito com
+      <span class="heart">♥</span>
+      para a comunidade
+
+    </footer>
+
+
+  </main>
+
+</body>
+</html>
