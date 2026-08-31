@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Dark Blox | Links</title>
+  <title>𝑩𝒓𝒖𝒏𝒊𝒏𝒃𝒍𝒐𝒙𝒚𝒀𝑻☆ | Links</title>
 
   <style>
     * {
@@ -16,12 +16,12 @@
 
     body {
       min-height: 100vh;
-      color: white;
+      color: #285b78;
 
       background:
-        radial-gradient(circle at top, #5425a8 0%, transparent 35%),
-        radial-gradient(circle at bottom, #142b78 0%, transparent 40%),
-        #070712;
+        radial-gradient(circle at top, #ffffff 0%, transparent 32%),
+        radial-gradient(circle at bottom, #b9eaff 0%, transparent 45%),
+        #eaf9ff;
 
       overflow-x: hidden;
     }
@@ -33,11 +33,12 @@
 
       background-image:
         radial-gradient(
-          rgba(255,255,255,.12) 1px,
-          transparent 1px
+          rgba(255,255,255,.8) 2px,
+          transparent 2px
         );
 
-      background-size: 35px 35px;
+      background-size: 38px 38px;
+
       pointer-events: none;
       z-index: -1;
     }
@@ -49,32 +50,38 @@
       text-align: center;
     }
 
+    /* FOTO / LOGO */
+
     .profile {
       width: 145px;
       height: 145px;
+
       margin: auto;
+      padding: 5px;
 
       border-radius: 50%;
-      padding: 5px;
 
       background:
         linear-gradient(
           135deg,
-          #8c4dff,
-          #38a5ff,
-          #c65cff
+          #ffffff,
+          #74d7ff,
+          #ffffff,
+          #a6e8ff
         );
 
       box-shadow:
-        0 0 25px rgba(126, 67, 255, .7),
-        0 0 60px rgba(42, 145, 255, .25);
+        0 0 25px rgba(80,190,240,.55),
+        0 0 55px rgba(100,210,255,.3);
 
       animation: float 3s ease-in-out infinite;
+
       overflow: hidden;
     }
 
     .profile img {
       display: block;
+
       width: 100%;
       height: 100%;
 
@@ -82,7 +89,7 @@
       object-position: center;
 
       border-radius: 50%;
-      border: 3px solid #090912;
+      border: 3px solid white;
     }
 
     @keyframes float {
@@ -95,34 +102,86 @@
       }
     }
 
+    /* NOME */
+
     h1 {
       margin-top: 18px;
 
       font-size: 30px;
       font-weight: 800;
 
+      color: #23769d;
+
       text-shadow:
-        0 0 10px #884cff,
-        0 0 25px #5b30ff;
+        0 0 8px #ffffff,
+        0 0 18px #83dcff;
     }
 
     .username {
       margin-top: 5px;
-      color: #b9b4d7;
+
+      color: #6695aa;
+
       font-size: 14px;
     }
 
     .description {
       margin: 15px auto 25px;
-      color: #d9d5ea;
+
+      color: #47758b;
+
       line-height: 1.5;
+
       max-width: 400px;
+
       font-size: 14px;
     }
 
+    /* DETALHE AZUL */
+
+    .cinnamoroll {
+      margin: 5px auto 18px;
+
+      width: 70px;
+      height: 8px;
+
+      border-radius: 20px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          #75d7ff,
+          #ffffff,
+          #75d7ff,
+          transparent
+        );
+
+      box-shadow:
+        0 0 12px rgba(80,200,255,.45);
+
+      animation: shine 2s ease-in-out infinite;
+    }
+
+    @keyframes shine {
+      0%, 100% {
+        opacity: .5;
+        transform: scaleX(.8);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+    }
+
+    /* BOTÕES */
+
     .links {
       display: flex;
+
       flex-direction: column;
+
       gap: 14px;
     }
 
@@ -130,24 +189,33 @@
       position: relative;
 
       display: flex;
+
       align-items: center;
 
       text-decoration: none;
-      color: white;
+
+      color: #285b78;
 
       padding: 16px 18px;
+
       min-height: 64px;
 
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 18px;
+      border: 2px solid rgba(255,255,255,.9);
 
-      background: rgba(255,255,255,.07);
+      border-radius: 20px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,255,255,.95),
+          rgba(216,246,255,.8)
+        );
 
       backdrop-filter: blur(15px);
 
       box-shadow:
-        0 8px 25px rgba(0,0,0,.25),
-        inset 0 1px rgba(255,255,255,.08);
+        0 8px 25px rgba(70,160,200,.18),
+        inset 0 1px rgba(255,255,255,1);
 
       overflow: hidden;
 
@@ -156,6 +224,8 @@
         box-shadow .25s ease,
         background .25s ease;
     }
+
+    /* BRILHO ANIMADO */
 
     .link::before {
       content: "";
@@ -172,11 +242,12 @@
         linear-gradient(
           90deg,
           transparent,
-          rgba(255,255,255,.18),
+          rgba(255,255,255,.95),
           transparent
         );
 
       transform: skewX(-20deg);
+
       transition: .6s;
     }
 
@@ -185,83 +256,151 @@
     }
 
     .link:hover {
-      transform: translateY(-4px) scale(1.015);
+      transform:
+        translateY(-5px)
+        scale(1.015);
 
-      background: rgba(126, 72, 255, .18);
+      background:
+        linear-gradient(
+          135deg,
+          #ffffff,
+          #c6f0ff
+        );
 
       box-shadow:
-        0 12px 30px rgba(83, 48, 255, .35),
-        0 0 20px rgba(92, 53, 255, .15);
+        0 12px 30px rgba(70,180,230,.3),
+        0 0 22px rgba(100,210,255,.25);
     }
+
+    /* BOTÃO PRINCIPAL */
+
+    .featured {
+      border-color: #73d5ff;
+
+      background:
+        linear-gradient(
+          135deg,
+          #ffffff,
+          #c9f1ff
+        );
+
+      box-shadow:
+        0 8px 25px rgba(60,175,225,.25),
+        0 0 20px rgba(100,210,255,.2);
+    }
+
+    /* ÍCONES */
 
     .icon {
       width: 42px;
       height: 42px;
 
       display: flex;
+
       align-items: center;
       justify-content: center;
 
       border-radius: 13px;
 
-      background: rgba(255,255,255,.1);
+      background:
+        linear-gradient(
+          135deg,
+          #d8f5ff,
+          #ffffff
+        );
+
+      border: 1px solid #bdeaff;
 
       font-size: 21px;
+
       flex-shrink: 0;
+
+      transition:
+        transform .3s ease,
+        box-shadow .3s ease;
     }
+
+    .link:hover .icon {
+      transform:
+        scale(1.15)
+        rotate(-5deg);
+
+      box-shadow:
+        0 0 15px rgba(80,200,255,.3);
+    }
+
+    /* TEXTO */
 
     .link-text {
       flex: 1;
+
       text-align: left;
+
       margin-left: 14px;
     }
 
     .link-title {
       font-size: 16px;
+
       font-weight: bold;
+
+      color: #216486;
     }
 
     .link-subtitle {
       margin-top: 3px;
+
       font-size: 11px;
-      color: #aaa5c2;
+
+      color: #7399aa;
     }
+
+    /* SETA */
 
     .arrow {
-      font-size: 20px;
-      color: #aaa;
+      font-size: 22px;
+
+      color: #70bddc;
+
+      transition: .25s;
     }
 
-    .featured {
-      border-color: rgba(135, 79, 255, .5);
+    .link:hover .arrow {
+      transform: translateX(5px);
 
-      background:
-        linear-gradient(
-          135deg,
-          rgba(119,64,255,.25),
-          rgba(35,117,255,.12)
-        );
+      color: #218ab8;
     }
+
+    /* RODAPÉ */
 
     .section-title {
       margin: 30px 0 13px;
-      color: #aaa5c2;
+
+      color: #6d9bad;
+
       font-size: 12px;
+
       text-transform: uppercase;
+
       letter-spacing: 2px;
     }
 
     footer {
       margin-top: 30px;
-      color: #77728d;
+
+      color: #7da2b2;
+
       font-size: 11px;
     }
 
     .heart {
-      color: #9b63ff;
+      color: #62c9f3;
     }
 
+    /* CELULAR */
+
     @media (max-width: 400px) {
+
       h1 {
         font-size: 26px;
       }
@@ -282,27 +421,45 @@
 
   <main class="container">
 
-    <!-- FOTO / LOGO -->
+    <!-- FOTO DO CANAL -->
 
     <div class="profile">
 
-      <img src="d246efac7204c80eb094b8c812bb1afa.jpg">
+      <img
+        src="./20260830174432.png"
+        alt="Foto de perfil do canal"
+      >
 
     </div>
+
 
     <!-- NOME -->
 
-    <h1>Dark Blox</h1>
+    <h1>
+      𝑩𝒓𝒖𝒏𝒊𝒏𝒃𝒍𝒐𝒙𝒚𝒀𝑻☆
+    </h1>
+
+
+    <!-- USUÁRIO -->
 
     <div class="username">
-      @Dark_blox-off
+      @BruninbloxyYT-off
     </div>
+
+
+    <!-- DESCRIÇÃO -->
 
     <p class="description">
       🎮 Conteúdo gamer, Roblox, edits e muito mais!
       <br>
-      Seja bem-vindo ao meu cantinho 💜
+      Seja bem-vindo ao meu cantinho azul!
     </p>
+
+
+    <!-- DETALHE -->
+
+    <div class="cinnamoroll"></div>
+
 
     <!-- BOTÕES -->
 
@@ -312,7 +469,7 @@
 
       <a
         class="link featured"
-        href="https://www.youtube.com/@Dark_blox-off"
+        href="https://www.youtube.com/@BruninbloxyYT-off"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -338,6 +495,7 @@
         </div>
 
       </a>
+
 
       <!-- TIKTOK -->
 
@@ -370,36 +528,6 @@
 
       </a>
 
-      <!-- WHATSAPP -->
-
-      <a
-        class="link"
-        href="https://whatsapp.com/channel/0029VbDWw0e8aKvIfgF7Cm1U"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-        <div class="icon">
-          💬
-        </div>
-
-        <div class="link-text">
-
-          <div class="link-title">
-            WhatsApp
-          </div>
-
-          <div class="link-subtitle">
-            Entre no meu canal!
-          </div>
-
-        </div>
-
-        <div class="arrow">
-          ›
-        </div>
-
-      </a>
 
       <!-- ROBLOX -->
 
@@ -432,12 +560,45 @@
 
       </a>
 
+
+      <!-- COMUNIDADE DO YOUTUBE -->
+
+      <a
+        class="link"
+        href="https://www.youtube.com/@BruninbloxyYT-off/community"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div class="icon">
+          💬
+        </div>
+
+        <div class="link-text">
+
+          <div class="link-title">
+            Comunidade do YouTube
+          </div>
+
+          <div class="link-subtitle">
+            Veja as novidades da comunidade!
+          </div>
+
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+
+      </a>
+
     </div>
+
 
     <!-- RODAPÉ -->
 
     <div class="section-title">
-      Obrigado por visitar 💜
+      Obrigado por visitar 💙
     </div>
 
     <footer>
